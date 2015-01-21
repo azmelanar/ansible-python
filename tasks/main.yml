@@ -1,0 +1,27 @@
+---
+# tasks file for python
+
+- name: include os-specific variables
+  include_vars: "{{ ansible_os_family }}.yml"
+  tags: [python]
+
+- name: install packages for debian system
+  apt: name={{ item }} state=present
+  with_items: python_packages + os_packages + python_deb_package_modules
+  when: ansible_os_family=='Debian'
+  tags: [python]
+
+- name: install packages for rhel system
+  yum: name={{ item }} state=present
+  with_items: python_packages + os_packages + python_rhel_package_modules
+  when: ansible_os_family=='RedHat'
+  tags: [python]
+
+- name: install pip
+  easy_install: name=pip
+  tags: [python]
+
+- name: install pip modules
+  pip: name={{ item }} state=present
+  with_items: pip_modules + python_pip_modules
+  tags: [python]

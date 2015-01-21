@@ -1,0 +1,12 @@
+---
+# vars file for python
+python_packages:
+  - python
+  - python-setuptools
+  - python-crypto
+
+pip_modules:
+  - paramiko
+  - PyYAML
+  - Jinja2
+  - httplib2

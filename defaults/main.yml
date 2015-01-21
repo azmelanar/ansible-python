@@ -1,0 +1,7 @@
+---
+# defaults file for python
+
+python_rhel_package_modules: []
+python_deb_package_modules: []
+
+python_pip_modules: []
