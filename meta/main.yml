@@ -19,5 +19,6 @@ galaxy_info:
     - wheezy
   categories:
   - system
+  - development
 
 dependencies: []
