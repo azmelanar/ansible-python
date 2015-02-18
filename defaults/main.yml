@@ -1,7 +1,8 @@
 ---
 # defaults file for python
 
-python_rhel_package_modules: []
-python_deb_package_modules: []
+# declare variable for set install custom modules via package manager
+python_package_modules: []
 
+# declare variable for set install pip modules
 python_pip_modules: []
