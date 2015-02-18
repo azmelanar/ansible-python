@@ -18,7 +18,9 @@ None
 Dependencies
 ------------
 
-None
+Only one dependency required for install epel repository on RHEL systems:
+
+    azmelanar.epel
 
 Example Playbook
 ----------------
