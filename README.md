@@ -1,7 +1,7 @@
 Python
 ======
 
-[![Build Status](https://api.travis-ci.org/azmelanar/ansible-python.png)](https://travis-ci.org/azmelanar/ansible-python) [![Ansible Galaxy](https://img.shields.io/badge/ansible--galaxy-python-blue.svg?style=flat)](https://galaxy.ansible.com/list#/roles/2616)
+[![Build Status](https://api.travis-ci.org/azmelanar/ansible-python.png)](https://travis-ci.org/azmelanar/ansible-python) [![Ansible Galaxy](https://img.shields.io/badge/ansible--galaxy-azmelanar.python-blue.svg?style=flat)](https://galaxy.ansible.com/list#/roles/2616)
 
 Role for install and manage python.
 
