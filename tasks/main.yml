@@ -7,21 +7,25 @@
 
 - name: install packages for debian system
   apt: name={{ item }} state=present
-  with_items: python_packages + os_packages + python_deb_package_modules
+  with_items:
+    - "{{ main_packages }}"
+    - "{{ os_packages }}"
+    - "{{ python_package_modules }}"
   when: ansible_os_family=='Debian'
   tags: [python]
 
 - name: install packages for rhel system
   yum: name={{ item }} state=present
-  with_items: python_packages + os_packages + python_rhel_package_modules
+  with_items:
+    - "{{ main_packages }}"
+    - "{{ os_packages }}"
+    - "{{ python_package_modules }}"
   when: ansible_os_family=='RedHat'
-  tags: [python]
-
-- name: install pip
-  easy_install: name=pip
   tags: [python]
 
 - name: install pip modules
   pip: name={{ item }} state=present
-  with_items: pip_modules + python_pip_modules
+  with_items:
+    - "{{ python_pip_modules }}"
+  when: python_pip_modules is defined
   tags: [python]
